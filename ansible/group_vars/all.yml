@@ -2,6 +2,7 @@
 ---
 
 # Users
+# Password can be used later for application that require authentication (eg. HTTP basic auth)
 users:
   - {
     username: erik,

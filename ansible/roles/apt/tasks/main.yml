@@ -1,0 +1,27 @@
+# The apt role installs all basic packages
+---
+
+- name: Install basic packages
+  apt:
+    name:
+      - curl
+      - git
+      - htop
+      - iftop
+      - iotop
+      - irqbalance
+      - lsof
+      - mtr
+      - rsync
+      - screen
+      - strace
+      - tcpdump
+      - vim
+      - wget
+      - whois
+      - tree
+      - traceroute
+      - unzip
+      - tar
+    state: present
+    update_cache: yes
