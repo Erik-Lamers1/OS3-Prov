@@ -1,0 +1,19 @@
+---
+
+- name: Place ssh sshd_config
+  template:
+    dest: /etc/ssh/sshd_config
+    force: yes
+    mode: '0644'
+    owner: root
+    group: root
+    src: sshd_config.jn2
+  notify: Restart sshd
+
+- name: Generate authorized_key file for root
+  authorized_key:
+    user: "{{ item.ssh_user }}"
+    state: "{{ item.state }}"
+    key: "{{ lookup('file', '../files/' + item.key) }}"
+  with_items: "{{ users }}"
+  tags: [authorized_keys, users]

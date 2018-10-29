@@ -1,0 +1,13 @@
+# Main role dependencies
+
+---
+dependencies:
+  - role: apt
+    tags: [apt]
+  - role: motd
+    tags: [motd]
+  - role: openssh
+    tags: [ssh]
+  - role: iptables
+    tags: [firewall, iptables]
+    when: firewall_enabled

@@ -1,0 +1,28 @@
+{{ ansible_managed }}
+
+
+     OOOOOOOOO        SSSSSSSSSSSSSSS       333333333333333
+   OO:::::::::OO    SS:::::::::::::::S     3:::::::::::::::33
+ OO:::::::::::::OO S:::::SSSSSS::::::S     3::::::33333::::::3
+O:::::::OOO:::::::OS:::::S     SSSSSSS     3333333     3:::::3
+O::::::O   O::::::OS:::::S                             3:::::3
+O:::::O     O:::::OS:::::S                             3:::::3
+O:::::O     O:::::O S::::SSSS                  33333333:::::3
+O:::::O     O:::::O  SS::::::SSSSS             3:::::::::::3
+O:::::O     O:::::O    SSS::::::::SS           33333333:::::3
+O:::::O     O:::::O       SSSSSS::::S                  3:::::3
+O:::::O     O:::::O            S:::::S                 3:::::3
+O::::::O   O::::::O            S:::::S                 3:::::3
+O:::::::OOO:::::::OSSSSSSS     S:::::S     3333333     3:::::3
+ OO:::::::::::::OO S::::::SSSSSS:::::S     3::::::33333::::::3
+   OO:::::::::OO   S:::::::::::::::SS      3:::::::::::::::33
+     OOOOOOOOO      SSSSSSSSSSSSSSS         333333333333333
+
+Host:       {{ ansible_fqdn }}
+Host IP:    {{ ansible_all_ipv4_addresses | first }}
+
+OS Distro:  {{ ansible_distribution }}
+OS Release: {{ ansible_distribution_release }}
+OS Version: {{ ansible_distribution_version }}
+
+Last motd update: {{ ansible_date_time.iso8601 }}

@@ -1,0 +1,11 @@
+# Motd related configuration
+---
+
+- name: Place motd
+  template:
+    dest: /etc/motd
+    force: yes
+    mode: '0644'
+    owner: root
+    group: root
+    src: motd.jn2

@@ -1,0 +1,16 @@
+# Variables that should be accessible for all server functions go here.
+---
+
+# Users
+users:
+  - {
+    username: erik,
+    ssh_user: root,
+    state: present,
+    key: erik@os3.nl,
+    password: "$6$qXRAusMB.RmFxY$Z75Klr5l42wwkCaQkXdq1jEuHqOnQALW.YLuGB3xCi4esELMzduFN429WYA0VlRKiNH67/V9hvXVG4LwjPloB/"
+  }
+
+# Do we want iptables?
+# TODO: implement iptables temaplate
+firewall_enabled: false

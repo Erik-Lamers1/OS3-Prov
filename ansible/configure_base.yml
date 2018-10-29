@@ -1,0 +1,7 @@
+---
+
+- hosts: base
+  user: root
+  roles:
+    - role: base
+      tags: [base]
