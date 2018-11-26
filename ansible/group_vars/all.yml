@@ -12,6 +12,9 @@ users:
     password: "$6$qXRAusMB.RmFxY$Z75Klr5l42wwkCaQkXdq1jEuHqOnQALW.YLuGB3xCi4esELMzduFN429WYA0VlRKiNH67/V9hvXVG4LwjPloB/"
   }
 
+
 # Do we want iptables?
 # TODO: implement iptables temaplate
 firewall_enabled: false
+
+netplan_ipv6_gateway: '2001:610:158:1043::1'

@@ -1,0 +1,14 @@
+# {{ ansible_managed }}
+# This file describes the network interfaces available on your system
+# For more information, see netplan(5).
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eno1:
+      dhcp4: true
+      dhcp6: false
+      addresses: ['{{ netplan_ipv6_address }}']
+      gateway6: '{{ netplan_ipv6_gateway }}'
+      nameservers:
+            addresses: ['127.0.0.1', '::1']

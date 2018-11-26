@@ -1,0 +1,19 @@
+---
+
+netplan_ipv6_address: '2001:610:158:1043:145:100:104:122/64'
+
+users:
+  - {
+    username: erik,
+    ssh_user: root,
+    state: present,
+    key: erik@os3.nl,
+    password: "$6$qXRAusMB.RmFxY$Z75Klr5l42wwkCaQkXdq1jEuHqOnQALW.YLuGB3xCi4esELMzduFN429WYA0VlRKiNH67/V9hvXVG4LwjPloB/"
+  }
+  - {
+    username: ronald,
+    ssh_user: root,
+    state: present,
+    key: ronald@os3.nl,
+    password: "$6$SU1Zxgjyldr$5Fz9mO9v16FYNOknLIi3LrG73bmE5C/8ONtfdH6b46KtRo0uZ7Ny4eiVHPtSfIl6gIADiMz1iRdP1zVyc8sKu1"
+  }
