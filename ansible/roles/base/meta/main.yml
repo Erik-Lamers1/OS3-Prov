@@ -2,6 +2,8 @@
 
 ---
 dependencies:
+  - role: netplan
+    tags: [netplan, networking]
   - role: apt
     tags: [apt]
   - role: motd

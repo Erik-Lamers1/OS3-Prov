@@ -1,0 +1,11 @@
+---
+
+- name: Place netplan config
+  template:
+    dest: /etc/netplan/01-netcfg.yaml
+    force: yes
+    mode: '0644'
+    owner: root
+    group: root
+    src: 01-netcfg.yaml.jn2
+  notify: Netplan apply
