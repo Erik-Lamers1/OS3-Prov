@@ -1,0 +1,9 @@
+---
+
+# NOTE: Only include this role if you want to use latex on your server, as it installs about 4GB of packages
+
+- name: Install texlive-full
+  apt:
+    name: texlive-full
+    state: latest
+    update_cache: yes

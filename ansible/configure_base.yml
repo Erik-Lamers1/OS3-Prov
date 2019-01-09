@@ -5,3 +5,9 @@
   roles:
     - role: base
       tags: [base]
+
+- hosts: latex
+  user: root
+  roles:
+    - role: latex
+      tags: [latex, tex]
