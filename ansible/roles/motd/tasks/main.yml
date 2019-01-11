@@ -9,3 +9,13 @@
     owner: root
     group: root
     src: motd.jn2
+
+- name: Remove stupid ubuntu motd spam
+  file:
+    path: "{{ item }}"
+    state: absent
+  ignore_errors: yes
+  with_items:
+    - /etc/update-motd.d/50-motd-news
+    - /etc/update-motd.d/80-esm
+    - /etc/update-motd.d/80-livepatch
