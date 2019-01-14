@@ -11,3 +11,15 @@
   roles:
     - role: latex
       tags: [latex, tex]
+
+- hosts: zmap
+  user: root
+  roles:
+    - role: zmap
+      tags: [zmap]
+
+- hosts: rp
+  user: root
+  roles:
+    - role: rp1_opt_out_webpage
+      tags: [rp1, web]

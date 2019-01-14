@@ -1,0 +1,15 @@
+---
+
+- name: Install ZMap
+  apt:
+    name: zmap
+    state: latest
+
+- name: Place ZMap config
+  copy:
+    dest: /etc/zmap/zmap.conf
+    src: zmap.conf
+    mode: '0644'
+    owner: root
+    group: root
+    force: yes
