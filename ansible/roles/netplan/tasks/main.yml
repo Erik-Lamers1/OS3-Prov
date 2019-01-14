@@ -8,4 +8,4 @@
     owner: root
     group: root
     src: 01-netcfg.yaml.jn2
-  notify: Netplan try
+  notify: Netplan apply
