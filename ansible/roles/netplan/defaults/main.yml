@@ -1,0 +1,5 @@
+---
+
+# By default we don't want any extra addresses assigned to the interfaces
+netplan_ipv6_extra_addresses: []
+netplan_ipv4_extra_addresses: []

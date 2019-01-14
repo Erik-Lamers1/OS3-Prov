@@ -1,3 +1,7 @@
 ---
 
+netplan_ipv4_extra_addresses:
+  - '145.100.110.97/28'
 netplan_ipv6_address: '2001:610:158:1043:145:100:104:107/64'
+netplan_ipv6_extra_addresses:
+  - '2001:610:158:2560::1/60'

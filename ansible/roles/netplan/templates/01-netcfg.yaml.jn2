@@ -8,7 +8,17 @@ network:
     eno1:
       dhcp4: true
       dhcp6: false
-      addresses: ['{{ netplan_ipv6_address }}']
+      addresses:
+{% for ip in netplan_ipv4_extra_addresses %}
+        # IPv4 extra
+        - '{{ ip }}'
+{% endfor %}
+        # IPv6 main
+        - '{{ netplan_ipv6_address }}'
+{% for ip in netplan_ipv6_extra_addresses %}
+        # IPv6 extra
+        - '{{ ip }}'
+{% endfor %}
       gateway6: '{{ netplan_ipv6_gateway }}'
       nameservers:
             addresses: ['127.0.0.1', '::1']

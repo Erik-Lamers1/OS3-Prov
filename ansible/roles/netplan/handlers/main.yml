@@ -1,4 +1,5 @@
 ---
-
-- name: Netplan apply
-  command: netplan apply
+# Don't use netplan apply because people might lock themselves out.
+# NOTE: netplan try is buggy, so you might need to kill the process if it gets stuck.
+- name: Netplan try
+  command: netplan try --timeout 30
