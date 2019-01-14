@@ -1,0 +1,16 @@
+---
+
+netplan_ipv4_extra_addresses:
+  - '145.100.110.49/28'
+netplan_ipv6_address: '2001:610:158:1043:145:100:104:104/64'
+netplan_ipv6_extra_addresses:
+  - '2001:610:158:2530::1/60'
+
+users:
+  - {
+    username: vincent,
+    ssh_user: root,
+    state: present,
+    key: vincent@os3.nl,
+    password: "$6$SU1Zxgjyldr$5Fz9mO9v16FYNOknLIi3LrG73bmE5C/8ONtfdH6b46KtRo0uZ7Ny4eiVHPtSfIl6gIADiMz1iRdP1zVyc8sKu1"
+  }
