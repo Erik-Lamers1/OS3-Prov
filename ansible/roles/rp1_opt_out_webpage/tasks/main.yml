@@ -1,0 +1,25 @@
+---
+
+- name: Place RP1 opt out index page
+  copy:
+    dest: /var/www/index.html
+    src: index.html
+    mode: '0644'
+    owner: root
+    group: www-data
+
+- name: Place RP1 opt out vhost
+  copy:
+    dest: /etc/nginx/sites-available/10-rp1-opt-out
+    src: 10-rp1-opt-out
+    mode: '0644'
+    owner: root
+    group: root
+  notify: Reload nginx
+
+- name: Enable RP1 opt out vhost
+  file:
+    path: /etc/nginx/sites-enabled/10-rp1-opt-out
+    state: link
+    src: /etc/nginx/sites-available/10-rp1-opt-out
+  notify: Reload nginx

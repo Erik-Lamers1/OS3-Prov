@@ -1,0 +1,13 @@
+---
+
+- name: Install nginx
+  apt:
+    name: nginx
+    state: latest
+
+- name: Disable default vhost
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  when: nginx_disable_default_vhost
+  notify: Reload nginx

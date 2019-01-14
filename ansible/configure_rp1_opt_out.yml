@@ -1,0 +1,7 @@
+---
+
+- hosts: rp
+  user: root
+  roles:
+    - role: rp1_opt_out_webpage
+      tags: [rp1, web]
