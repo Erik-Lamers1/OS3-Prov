@@ -19,10 +19,17 @@ O:::::::OOO:::::::OSSSSSSS     S:::::S     3333333     3:::::3
      OOOOOOOOO      SSSSSSSSSSSSSSS         333333333333333
 
 Host:       {{ ansible_fqdn }}
-Host IP:    {{ ansible_all_ipv4_addresses | first }}
+Host IPv4:  {{ ansible_default_ipv4.address }}
+{% if ansible_default_ipv6|length %}
+Host IPv6:  {{ ansible_default_ipv6.address }}
+{% endif %}
 
 OS Distro:  {{ ansible_distribution }}
 OS Release: {{ ansible_distribution_release }}
 OS Version: {{ ansible_distribution_version }}
 
-Last motd update: {{ ansible_date_time.iso8601 }}
+CPU:        {{ ansible_processor[2] }}
+vCPU cores: {{ ansible_processor_vcpus }}
+Total mem:  {{ ansible_memtotal_mb }} MB
+
+Last motd update: {{ ansible_date_time.date }} {{ ansible_date_time.hour }}-{{ ansible_date_time.minute }}-{{ ansible_date_time.second }} {{ ansible_date_time.tz }}
