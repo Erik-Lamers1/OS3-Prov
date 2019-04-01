@@ -23,5 +23,8 @@
       - traceroute
       - unzip
       - tar
+      # Because we love CIA
+      - g++
+      - build-essential
     state: present
     update_cache: yes

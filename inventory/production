@@ -1,17 +1,17 @@
 [all:vars]
 
 [base]
-bastia.studlab.os3.nl
+#bastia.studlab.os3.nl
 caen.studlab.os3.nl
 #reims.studlab.os3.nl
 
 [latex]
-caen.studlab.os3.nl
+#caen.studlab.os3.nl
 
 [rp]
-bastia.studlab.os3.nl
+#bastia.studlab.os3.nl
 caen.studlab.os3.nl
 
 [zmap]
-bastia.studlab.os3.nl
-caen.studlab.os3.nl
+#bastia.studlab.os3.nl
+#caen.studlab.os3.nl
