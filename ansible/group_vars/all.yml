@@ -17,4 +17,4 @@ users:
 # TODO: implement iptables temaplate
 firewall_enabled: false
 
-netplan_ipv6_gateway: '2001:610:158:1043::1'
+netplan_ipv6_gateway: '2001:610:158:1046::1'
